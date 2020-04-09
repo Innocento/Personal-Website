@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Welcome to Innocent Omido Site{% endblock %}</title>
+  <!-- Bootstrap 4 Cdn For CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+  <!--<script type="text/javascript" src="{% static 'main.js' %}></script> -->
+</head>
+<body>
+<div class="container-fluid">
+  {% block sidebar %}
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav mr-4">
+          <li class="nav-item">
+            <a class="nav-link" data-value="about" href="#">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " data-value="blog" href="#">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " data-value="team" href="#">SKILLS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " data-value="team" href="#">EDUCATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " data-value="contact" href="#">EXPERIENCE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " data-value="contact" href="#">WORK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " data-value="contact" href="#">BLOG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " data-value="contact" href="#">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </button>
+  </nav>
+  {% endblock %}
+
+  {% block content %}
+
+  {% endblock %}
+</div>
+</body>
+</html>
